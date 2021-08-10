@@ -1,7 +1,7 @@
 import sys
 
 def kokbulma(a,b,c):
-    delta = b ** 2 -4 * a * c
+    delta = b ** 2 - 4 * a * c
     if (delta < 0):
         print("Reel kök yok")
         
