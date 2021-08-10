@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
+
 url = "https://kur.doviz.com/"
 html = requests.get(url).content
-soup = BeautifulSoup(html,"html.parser")
-items = soup.find("div",{"class":"table"}).find_all("tr")
+soup = BeautifulSoup(html, "html.parser")
+items = soup.find("div", {"class":"table"}).find_all("tr")
 dovName = []
 i = True
 exchane = {}
@@ -12,7 +13,8 @@ for info in items:
     if i == True or name == None:
         i = False
         continue
-    value = info.find_all("td")[2].text.replace(",",".")
+        
+    value = info.find_all("td")[2].text.replace(",", ".")
     value = float(value)
     exchane[name] = value
     dovName.append(name)
@@ -20,23 +22,25 @@ for info in items:
 print("----------------------------------\n")
 print("Döviz tipleri:")
 print(dovName)
-bozulandöviz = input("Bozulan döviz türü:")
-alınandöviz = input("Alınan döviz türü:")
-miktar = int(input(f"Ne kadar {bozulandöviz} bozdurmak istiyorsunuz? "))
+bozulandoviz = input("Bozulan döviz türü:")
+alinandoviz = input("Alınan döviz türü:")
+miktar = int(input(f"Ne kadar {bozulandoviz} bozdurmak istiyorsunuz? "))
 print("\n-----------------------")
-if bozulandöviz == 'TRY':
-    temp = miktar / exchane[alınandöviz]
-    temp2= 1/exchane[alınandöviz]
-    temp = exchane[bozulandöviz] * miktar
-elif alınandöviz == 'TRY':
-    temp = exchane[bozulandöviz] * miktar
-    temp2 = exchane[bozulandöviz]
+if bozulandoviz == 'TRY':
+    temp = miktar / exchane[alinandoviz]
+    temp2= 1/exchane[alinandoviz]
+    temp = exchane[bozulandoviz] * miktar
+    
+elif alinandoviz == 'TRY':
+    temp = exchane[bozulandoviz] * miktar
+    temp2 = exchane[bozulandoviz]
+    
 else:
-    temp = exchane[bozulandöviz] * miktar
-    temp = temp /exchane[alınandöviz]
-    temp2 = exchane[bozulandöviz] / exchane[alınandöviz]
+    temp = exchane[bozulandoviz] * miktar
+    temp = temp /exchane[alinandoviz]
+    temp2 = exchane[bozulandoviz] / exchane[alinandoviz]
 
-print("1 {} = {:.4f} {}".format(bozulandöviz,temp2,alınandöviz))
-print(f"{miktar} {bozulandöviz} = {temp:.4f} {alınandöviz}")
+print("1 {} = {:.4f} {}".format(bozulandoviz, temp2, alinandoviz))
+print(f"{miktar} {bozulandoviz} = {temp:.4f} {alinandoviz}")
 print("--------------------")
 print("\n-------------------------------------------")
