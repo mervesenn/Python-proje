@@ -1,9 +1,9 @@
 from math import*
 def toplama(a,b):
     return a+b
-def çıkarma(a,b):
+def cıkarma(a,b):
     return a-b
-def çarpma(a,b):
+def carpma(a,b):
     return a*b
 def bölme(a,b):
     return a/b
@@ -27,11 +27,11 @@ while True:
     elif (islem == "2"):
         a = int(input("birinci sayı:"))
         b = int(input("ikinci sayı:"))
-        print(çıkarma(a,b))
+        print(cıkarma(a,b))
     elif (islem == "3"):
         a = int(input("birinci sayı:"))
         b = int(input("ikinci sayı:"))
-        print(çarpma(a,b))
+        print(carpma(a,b))
     elif (islem == "4"):
         a = int(input("birinci sayı:"))
         b = int(input("ikinci sayı:"))
