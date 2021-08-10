@@ -17,7 +17,7 @@ mesajgovdesi = MIMEText(yazi, "plain")
 mesaj.attach(mesajgovdesi)
 
 try:
-    mail = smtplib.SMTP("smtp.gmail.com",587)
+    mail = smtplib.SMTP("smtp.gmail.com", 587)
     mail.ehlo()
     mail.starttls()
     mail.login("mervesen1095@gmail.com", "")
