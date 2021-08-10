@@ -7,26 +7,30 @@ sayı tahmin oyunu
 
 """)
 
-rastgelesayı = random.randint(1,40)
-tahminhakkı = 7
+rastgelesayi = random.randint(1,40)
+tahminhakki = 7
+
 while True:
     tahmin = int(input("tahmininiz:"))
-    if(tahmin<rastgelesayı):
+    if(tahmin < rastgelesayi):
         print("bilgiler sorgulanıyor")
         time.sleep(1)
         print("daha yüksek bir sayı söyleyin")
-        tahminhakkı -= 1
-    elif (tahmin>rastgelesayı):
+        tahminhakki -= 1
+        
+    elif (tahmin > rastgelesayi):
         print("bilgiler sorgulanıyor")
         time.sleep(1)
         print("daha düşük bir sayı söyleyin")
-        tahminhakkı -= 1
+        tahminhakki -= 1
+        
     else:
         print("bilgiler sorgulanıyor")
         time.sleep(1)
-        print("tebrikler! sayınız:",rastgelesayı)
+        print("tebrikler! sayınız:", rastgelesayi)
         break
-    if(tahminhakkı==0):
+        
+    if(tahminhakki == 0):
         print("tahmin hakkınız bitti")
-        print("sayınız:",rastgelesayı)
+        print("sayınız:", rastgelesayi)
         break
