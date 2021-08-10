@@ -1,7 +1,9 @@
 import requests
+
 url = "https://data.fixer.io/api/latest"
-birincidöviz = input("Birinci döviz:")
-ikincidöviz = input("İkinci döviz:")
-response =requests.get(url + birincidöviz)
+birincidoviz = input("Birinci döviz:")
+ikincidoviz = input("İkinci döviz:")
+response = requests.get(url + birincidoviz)
 jsonverisi = response.json()
+
 print(jsonverisi["rates"])
