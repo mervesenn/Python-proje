@@ -2,12 +2,16 @@ from math import*
 
 def toplama(a,b):
     return a+b
+
 def cıkarma(a,b):
     return a-b
+
 def carpma(a,b):
     return a*b
+
 def bölme(a,b):
     return a/b
+
 print("""*************
 "gelişmiş hesap makinesi programı"
 "lütfen bir işlem seçiniz"
