@@ -1,11 +1,11 @@
 kalanlar = []
 gecenler = []
-def not_hesapla(satır):
+def not_hesapla(satir):
 
 
-    satır = satır[:-1]
+    satir = satir[:-1]
 
-    liste = satır.split(",")
+    liste = satir.split(",")
 
     isim = liste[0]
 
@@ -39,6 +39,7 @@ def not_hesapla(satır):
 
     if (son_not >= 55):
         gecenler.append(isim + "---------->" + "not ortalaması:" + str(son_not) + "--------->" + harf + "\n")
+        
     else:
         kalanlar.append(isim + "---------->" + "not ortalaması:" + str(son_not) + "--------->" + harf + "\n")
     return isim + "---------->" + "not ortalaması:" + str(son_not) + "---------->" + harf + "\n"
@@ -47,12 +48,15 @@ with open("dosya.txt","r",encoding="utf-8") as file:
     eklenecekler_listesi = []
     for i in file:
         eklenecekler_listesi.append(not_hesapla(i))
+        
     with open("harf-not.txt","w",encoding="utf-8") as file2:
         for i in eklenecekler_listesi:
             file2.write(i)
+            
     with open("gecenler.txt","w",encoding="utf-8") as file3:
         for i in gecenler:
             file3.write(i)
+            
     with open("kalanlar.txt","w",encoding="utf-8") as file4:
         for i in kalanlar:
             file4.write(i)
