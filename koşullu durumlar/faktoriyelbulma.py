@@ -5,14 +5,16 @@ faktöriyel bulma programı
 *************""")
 
 while True:
-    sayı = input("sayı:")
-    if (sayı == "q"):
+    sayi = input("sayı:")
+    if (sayi == "q"):
         print("program sonlandırılıyor")
         break
+        
     else:
-        sayı = int(sayı)
+        sayi = int(sayi)
         faktoriyel = 1
-        for i in range(2,sayı+1):
-            print("faktöriyel",faktoriyel,"i:",i)
+        for i in range(2, sayi + 1):
+            print("faktöriyel", faktoriyel,"i:", i)
             faktoriyel *= i
+            
         print("faktöriyel", faktoriyel)
