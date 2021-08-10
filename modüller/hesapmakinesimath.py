@@ -1,4 +1,5 @@
 from math import*
+
 def toplama(a,b):
     return a+b
 def cıkarma(a,b):
