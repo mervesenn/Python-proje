@@ -1,25 +1,31 @@
 def ekstra(fonksiyon):
-    def wrapper(sayılar):
-        çiftlertoplamı = 0
-        çiftsayılar = 0
-        teklertoplamı = 0
-        teksayılar = 0
-        for sayı in sayılar:
-            if (sayı % 2 == 0):
-                çiftlertoplamı += sayı
-                çiftsayılar += 1
+    def wrapper(sayilar):
+        ciftlertoplami = 0
+        ciftsayilar = 0
+        teklertoplami = 0
+        teksayilar = 0
+        
+        for sayi in sayilar:
+            if (sayi % 2 == 0):
+                ciftlertoplami += sayi
+                ciftsayilar += 1
+                
             else:
-                teklertoplamı += sayı
-                teksayılar += 1
-        print("Teklerin ortalaması:",teklertoplamı/teksayılar)
-        print("Çiftlerin ortalaması:",çiftlertoplamı/çiftsayılar)
-        fonksiyon(sayılar)
+                teklertoplami += sayi
+                teksayilar += 1
+                
+        print("Teklerin ortalaması:", teklertoplami / teksayilar)
+        print("Çiftlerin ortalaması:", ciftlertoplami / ciftsayilar)
+        fonksiyon(sayilar)
     return wrapper
-@ekstra
 
-def ortalamabul(sayılar):
+@ekstra
+def ortalamabul(sayilar):
     toplam = 0
-    for sayı in sayılar:
-        toplam += sayı
-    print("Genel Ortalama:",toplam/len(sayılar))
+    
+    for sayi in sayilar:
+        toplam += sayi
+        
+    print("Genel Ortalama:", toplam / len(sayilar))
+    
 ortalamabul([1,2,3,4,34,60,63,32,100,105])
