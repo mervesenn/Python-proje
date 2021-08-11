@@ -6,7 +6,7 @@ def fibonacci():
     while True:
         a,b = b,a+b
         yield b
-for sayı in fibonacci():
-    if (sayı > 100000):
+for sayi in fibonacci():
+    if (sayi > 100000):
         break
-    print(sayı)
+    print(sayi)
