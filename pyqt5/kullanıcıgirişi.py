@@ -6,10 +6,11 @@ class Pencere(QtWidgets.QWidget):
         super().__init__()
         self.baglantiolustur()
         self.init_ui()
+        
     def baglantiolustur(self):
         baglanti = sqlite3.connect("database.db")
         self.cursor = baglanti.cursor()
-        self.cursor.execute("Create Table If not exists üyeler(kullanıcıadı TEXT,parola TEXT)")
+        self.cursor.execute("Create Table If not exists üyeler(kullaniciadi TEXT, parola TEXT)")
         baglanti.commit()
 
     def init_ui(self):
@@ -33,16 +34,20 @@ class Pencere(QtWidgets.QWidget):
         self.setWindowTitle("Kullanıcı Girişi")
         self.giris.clicked.connect(self.login)
         self.show()
+        
     def login(self):
         adi = self.kullaniciadi.text()
         par = self.parola.text()
         self.cursor.execute("Select * From üyeler Where kullanıcıadı = ? and parola = ?",(adi,par))
         data = self.cursor.fetchall()
+        
         if len(data) == 0:
             self.yazialani.setText("Böyle bir kullanıcı yok\nLütfen tekrar deneyin.")
         else:
             self.yazialani.setText("Hoşgeldiniz" + adi)
 
 app = QtWidgets.QApplication(sys.argv)
+
 pencere = Pencere()
+
 sys.exit(app.exec())
