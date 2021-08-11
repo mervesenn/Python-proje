@@ -3,7 +3,7 @@ class Hayvanlar():
     
     def __init__(self, tur = "omurgasızlar ve omurgalılar", yasamalani = "kara,hava ve su", beslenmecesiti = "etçil,otçul veya hem etçil hem otçul", ayaksayisi = "2-4 arasında değişmektedir"):
         self.tur = tur
-        self.yasamalanı = yasamalani
+        self.yasamalani = yasamalani
         self.beslenmecesiti = beslenmecesiti
         self.ayaksayisi = ayaksayisi
         
