@@ -1,16 +1,16 @@
 class Kareler():
     def __init__(self,max):
         self.max = max
-        self.sayı = 1
+        self.sayi = 1
     def __iter__(self):
         return self
     def __next__(self):
-        if (self.sayı <= self.max):
-            sonuç = 2 ** self.sayı
-            self.sayı += 1
-            return sonuç
+        if (self.sayi <= self.max):
+            sonuc = 2 ** self.sayi
+            self.sayi += 1
+            return sonuc
         else:
-            self.sayı = 1
+            self.sayi = 1
             raise StopIteration
 kareler = Kareler(5)
 for i in kareler:
