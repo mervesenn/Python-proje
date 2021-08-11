@@ -1,17 +1,17 @@
-def asalmı(sayı):
+def asalmi(sayi):
     i = 2
-    while i<sayı:
-        if (sayı % i == 0):
+    while i < sayi:
+        if (sayi % i == 0):
             return False
         i += 1
     return True
 def asalgenerator():
     i = 2
     while True:
-        if (asalmı(i)):
+        if (asalmi(i)):
             yield i
         i +=1
-for sayı in asalgenerator():
-    if (sayı >1000):
+for sayi in asalgenerator():
+    if (sayi > 1000):
         break
-    print(sayı)
+    print(sayi)
