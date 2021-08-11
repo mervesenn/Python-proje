@@ -123,8 +123,9 @@ class Kutuphane():
                 print(geneltoplamdakika,"dakika", geneltoplamsaniye,"saniye")
             else:
                 return False
-    def yardım(self):
+    def yardim(self):
         print("İşlemler:\n\tKütüphanedeki şarkıları görmek için:(Şarkıları göster),\n\tKütüphaneye şarkı eklemek için:(Şarkı ekle),\n\tKütüphaneden şarkı silmek için:(Şarkı sil),\n\tKütüphanedeki toplam şarkı süresini görmek için: (Toplam süreyi göster)yazınız.")
+        
 kutuphane = Kutuphane()
 print("\tŞarkı kütüphanesi v1.0")
 time.sleep(1)
