@@ -6,9 +6,9 @@ class Kuvvet3():
         return self
     def __next__(self):
         if (self.kuvvet <= self.max):
-            sonuç = 3 ** self.kuvvet
+            sonuc = 3 ** self.kuvvet
             self.kuvvet += 1
-            return sonuç
+            return sonuc
         else:
             self.kuvvet = 0
             raise StopIteration
